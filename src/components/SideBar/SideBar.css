@@ -1,0 +1,35 @@
+.SideBar {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100%;
+    position: absolute;
+}
+
+.SideBar a {
+    padding-bottom: 1rem;
+}
+
+.SideBar img {
+    height: 64px;
+}
+
+.SideBar nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0 3rem;
+}
+
+.SideBar .copiryght {
+    writing-mode: vertical-lr;
+    transform: rotateZ(180deg);
+    color: white;
+    font-size: 12px;
+    margin-bottom: 1rem;
+}
