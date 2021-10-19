@@ -1,25 +1,16 @@
-.header {
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 91px;
+.DashboardHeader {
+    margin-bottom: 3rem;
 }
 
-.header a {
-    color: white;
-    font-size: 24px;
+.DashboardHeaderhello {
+    font-size: 48px;
+    margin-bottom: 1rem;
 }
 
-.header .logo {
-    padding-left: 2rem;
-    height: 61px;
+.DashboardHeaderhello span {
+    color: red;
 }
 
-.header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 1;
-    padding: 0 2rem;
+.DashboardHeaderMessage {
+    font-size: 18px;
 }

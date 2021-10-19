@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './Dashboard.css';
-import DashboardHeader from '../../components/DashboardHeader/DashboardHeader';
 import API from '../../data/API';
+import DashboardHeader from '../../components/DashboardHeader/DashboardHeader';
+import BarGraph from '../../components/BarGraph/BarGraph';
 
 function Dashboard() {
     const [userSelect, setUserSelect] = useState(null);
@@ -24,14 +25,15 @@ function Dashboard() {
     }, []);
 
     if (loading) {
-        return <div>Loading</div>;
+        return <div className='loading'>Loading</div>;
     } else if (error) {
-        return <div>Erreur</div>;
+        return <div className='error'>Erreur</div>;
     } else {
-    return (
-        <main className="dashboard">
-            <DashboardHeader user={userSelect}/>
-        </main>
+        return (
+            <main className="dashboard">
+                <DashboardHeader selectedUser={userSelect}/>
+                <BarGraph selectedUser={userSelect}/>
+            </main>
     );
 }
 }

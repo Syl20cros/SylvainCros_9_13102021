@@ -8,21 +8,21 @@ import './DashboardHeader.css';
  */
 function DashboardHeader(props) {
 
-        const { user } = props;
+        const { selectedUser } = props;
 
         let message;
 
         /*If calorieCount is < 2000 then message takes a value else it takes another*/
-        if (user.keyData.calorieCount < 2000) {
+        if (selectedUser.keyData.calorieCount < 2000) {
             message = 'On y est presque, un petit effort 💪';
         } else {
             message = 'Félicitation ! Vous avez explosé vos objectifs hier 👏';
         }
         return (
-            <div className="DashboardHeader">
-                <h2 className="DashboardHeaderhello">Bonjour {user.userInfos.firstName}</h2>
+            <section className="DashboardHeader">
+                <h2 className="DashboardHeaderhello">Bonjour <span>{selectedUser.userInfos.firstName}</span></h2>
                 <p className="DashboardHeaderMessage">{message}</p>
-            </div>
+            </section>
         );
 }
 
