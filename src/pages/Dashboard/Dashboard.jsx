@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Dashboard.css';
 import API from '../../data/API';
 import DashboardHeader from '../../components/DashboardHeader/DashboardHeader';
-import BarGraph from '../../components/BarGraph/BarGraph';
+import CallBarGraph from '../../components/BarGraph/CallBarGraph';
 
 function Dashboard() {
     const [userSelect, setUserSelect] = useState(null);
@@ -10,10 +10,9 @@ function Dashboard() {
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        API.getInitialUser(12)
+        API.getInitialUser(18)
             .then((response) => {
                 setUserSelect(response.data.data);
-                console.log(response);
             })
             .catch((error) => {
                 console.log(error);
@@ -32,10 +31,10 @@ function Dashboard() {
         return (
             <main className="dashboard">
                 <DashboardHeader selectedUser={userSelect}/>
-                <BarGraph selectedUser={userSelect}/>
+                <CallBarGraph selectedUser={userSelect}/>
             </main>
-    );
-}
+        );
+    }
 }
 
 export default Dashboard;
