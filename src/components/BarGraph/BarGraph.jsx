@@ -1,8 +1,7 @@
 import React from 'react';
 import './BarGraph.css';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-// import API from '../../data/API';
-// import Format from '../../data/Format';
+import PropTypes from 'prop-types';
 
 
 function BarGraph({data}) {
@@ -76,5 +75,12 @@ function BarGraph({data}) {
     </section>
   );
 }
+
+BarGraph.propTypes = {
+  /**
+   * data is an array
+   */
+  data: PropTypes.array.isRequired
+};
 
 export default BarGraph;

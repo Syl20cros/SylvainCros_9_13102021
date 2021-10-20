@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import API from '../../data/API';
 import Format from '../../data/Format';
 import BarGraph from './BarGraph';
+import PropTypes from 'prop-types';
 
 
 function CallBarGraph(props) {
@@ -39,6 +40,14 @@ function CallBarGraph(props) {
     );
   }
 }
+
+
+CallBarGraph.propTypes = {
+  /**
+   * userId is an integer
+   */
+  id: PropTypes.number.isRequired
+};
 
 export default CallBarGraph;
 
