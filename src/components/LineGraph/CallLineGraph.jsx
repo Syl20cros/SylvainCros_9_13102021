@@ -43,10 +43,10 @@ function CallLineGraph(props) {
 
 
 CallLineGraph.propTypes = {
-  /**
-   * id is an integer
+   /**
+   * User selected
    */
-  id: PropTypes.number.isRequired
+    selectedUser: PropTypes.object.isRequired
 };
 
 export default CallLineGraph;

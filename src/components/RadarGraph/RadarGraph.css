@@ -1,0 +1,44 @@
+.RadarGraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282d30;
+    width: 258px;
+    height: 263px;
+    border-radius: 5px;
+    @media (max-width: 1024px) {
+        width: 35%;
+    }
+}
+
+.LineGraphTitle {
+    color: white;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    position: absolute;
+    left: 34px;
+    top: 29px;
+    width: 147px;
+    opacity: 50.4%;
+}
+
+.LineGraph .customTooltip {
+    background-color: white;
+    text-align: center;
+    margin-left: 7px;
+}
+
+.LineGraph .customTooltipLabel {
+    color: black;
+    padding: 0.7rem;
+    font-size: 8px;
+}
+
+.LineGraph .recharts-cartesian-axis-tick-value {
+    font-size: 12px;
+}
+
+.LineGraph .recharts-line {
+    stroke-width: 6;
+}

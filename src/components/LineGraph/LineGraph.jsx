@@ -39,11 +39,8 @@ function LineGraph({data, title}) {
     return null
   };
 
-
-  console.log(data);
   return (
     <section className="LineGraph">
-      {/* <h3 className="LineGraphTitle">Durée moyenne des sessions</h3> */}
       <h3 className="LineGraphTitle">{title}</h3>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart

@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import API from '../../data/API';
 import Format from '../../data/Format';
-import BarGraph from './BarGraph';
+import RadarGraph from './RadarGraph';
 import PropTypes from 'prop-types';
 
 
-function CallBarGraph(props) {
+function CallRadarGraph(props) {
   const { selectedUser } = props;
-  const [activity, setActivity] = useState(null);
+  const [performance, setPerformance] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  
+
   useEffect(() => {
-    API.getActivity(selectedUser.id)
+    API.getSessionIntensity(selectedUser.id)
         .then((response) => {
-            setActivity(
-                Format.activityFormat(response).map((activity, i) => {
-                    return { ...activity, index: i + 1 };
-                })
+            setPerformance(
+                Format.performanceFormat(response)
             );
         })
         .catch((error) => {
@@ -29,25 +27,24 @@ function CallBarGraph(props) {
         });
   }, [selectedUser]);
 
-
   if (loading) {
     return <div>Loading</div>;
   } else if (error) {
       return <div>Erreur</div>;
   } else {
       return (
-      <BarGraph data={activity} />
+      <RadarGraph input={performance}/>
     );
   }
 }
 
 
-CallBarGraph.propTypes = {
-   /**
+CallRadarGraph.propTypes = {
+  /**
    * User selected
    */
-    selectedUser: PropTypes.object.isRequired
+   selectedUser: PropTypes.object.isRequired
 };
 
-export default CallBarGraph;
+export default CallRadarGraph;
 

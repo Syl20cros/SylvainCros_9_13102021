@@ -4,6 +4,7 @@ import API from '../../data/API';
 import DashboardHeader from '../../components/DashboardHeader/DashboardHeader';
 import CallBarGraph from '../../components/BarGraph/CallBarGraph';
 import CallLineGraph from '../../components/LineGraph/CallLineGraph';
+import CallRadarGraph from '../../components/RadarGraph/CallRadarGraph';
 
 function Dashboard() {
     const [userSelect, setUserSelect] = useState(null);
@@ -34,6 +35,7 @@ function Dashboard() {
                 <DashboardHeader selectedUser={userSelect}/>
                 <CallBarGraph selectedUser={userSelect}/>
                 <CallLineGraph selectedUser={userSelect}/>
+                <CallRadarGraph selectedUser={userSelect}/>
             </main>
         );
     }
