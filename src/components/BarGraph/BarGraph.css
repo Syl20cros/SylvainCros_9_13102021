@@ -3,11 +3,19 @@
     width: 835px;
     height: 320px;
     position: relative;
-    padding: 20px 0 0 0;
+    padding: 20px 0 0 0px;
     border-radius: 5px;
+    margin-bottom: 2rem;
     @media (max-width: 1024px) {
         width: 100%;
     }
+}
+
+.BarGraphTitle {
+    padding-left: 32px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
 }
 
 .customTooltip {
@@ -16,17 +24,17 @@
     margin-left: 7px;
 }
 
-.customTooltipLabel {
+.BarGraph .customTooltipLabel {
     color: white;
     padding: 1rem;
     font-size: 7px;
 }
 
-.recharts-cartesian-axis-tick-value {
+.BarGraph .recharts-cartesian-axis-tick-value {
     font-size: 14px;
     fill: #9B9EAC;
 }
 
-.recharts-legend-wrapper {
+.BarGraph .BarGraph.recharts-legend-wrapper {
     padding-bottom: 47px;
 }

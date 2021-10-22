@@ -36,7 +36,7 @@ function BarGraph({data}) {
 
   return (
     <section className="BarGraph">
-      <h3 className="BarGraphhello">Activité quotidienne</h3>
+      <h3 className="BarGraphTitle">Activité quotidienne</h3>
       <ResponsiveContainer width="100%" height="90%">
         <BarChart
           width={500}

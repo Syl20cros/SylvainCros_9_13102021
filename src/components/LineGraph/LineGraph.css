@@ -1,0 +1,43 @@
+.LineGraph {
+    position: relative;
+    background: linear-gradient(to right, #ff0000 75%, #df0000 25%);
+    width: 258px;
+    height: 263px;
+    padding: 29px 0 0 0;
+    border-radius: 5px;
+    @media (max-width: 1024px) {
+        width: 30%;
+    }
+}
+
+.LineGraphTitle {
+    color: white;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    position: absolute;
+    left: 34px;
+    top: 29px;
+    width: 147px;
+    opacity: 50.4%;
+}
+
+.LineGraph .customTooltip {
+    background-color: white;
+    text-align: center;
+    margin-left: 7px;
+}
+
+.LineGraph .customTooltipLabel {
+    color: black;
+    padding: 0.7rem;
+    font-size: 8px;
+}
+
+.LineGraph .recharts-cartesian-axis-tick-value {
+    font-size: 12px;
+}
+
+.LineGraph .recharts-line {
+    stroke-width: 6;
+}

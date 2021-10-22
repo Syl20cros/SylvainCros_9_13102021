@@ -11,7 +11,7 @@ class API {
         return axios.get(baseURL+`/user/${id}/activity`)
     }
 
-    static async getAverageSessions (id){
+    static async getSessionDuration (id){
         return axios.get(baseURL+`/user/${id}/average-sessions`)
     }
 

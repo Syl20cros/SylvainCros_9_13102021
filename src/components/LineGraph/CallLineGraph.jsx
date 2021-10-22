@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import API from '../../data/API';
 import Format from '../../data/Format';
-import BarGraph from './BarGraph';
+import LineGraph from './LineGraph';
 import PropTypes from 'prop-types';
 
 
-function CallBarGraph(props) {
+function CallLineGraph(props) {
   const { selectedUser } = props;
-  const [activity, setActivity] = useState(null);
+  const [duration, setDuration] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  
+
   useEffect(() => {
-    API.getActivity(selectedUser.id)
+    API.getSessionDuration(selectedUser.id)
         .then((response) => {
-            setActivity(
-                Format.activityFormat(response).map((activity, i) => {
-                    return { ...activity, index: i + 1 };
+            setDuration(
+                Format.durationFormat(response).map((duration, i) => {
+                    return { ...duration, index: i + 1 };
                 })
             );
         })
@@ -36,18 +36,18 @@ function CallBarGraph(props) {
       return <div>Erreur</div>;
   } else {
       return (
-      <BarGraph data={activity} />
+      <LineGraph data={duration} title="Durée moyenne des sessions"/>
     );
   }
 }
 
 
-CallBarGraph.propTypes = {
+CallLineGraph.propTypes = {
   /**
    * id is an integer
    */
   id: PropTypes.number.isRequired
 };
 
-export default CallBarGraph;
+export default CallLineGraph;
 

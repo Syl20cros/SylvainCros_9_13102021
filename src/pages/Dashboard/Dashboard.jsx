@@ -3,6 +3,7 @@ import './Dashboard.css';
 import API from '../../data/API';
 import DashboardHeader from '../../components/DashboardHeader/DashboardHeader';
 import CallBarGraph from '../../components/BarGraph/CallBarGraph';
+import CallLineGraph from '../../components/LineGraph/CallLineGraph';
 
 function Dashboard() {
     const [userSelect, setUserSelect] = useState(null);
@@ -10,7 +11,7 @@ function Dashboard() {
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        API.getInitialUser(18)
+        API.getInitialUser(12)
             .then((response) => {
                 setUserSelect(response.data.data);
             })
@@ -32,6 +33,7 @@ function Dashboard() {
             <main className="dashboard">
                 <DashboardHeader selectedUser={userSelect}/>
                 <CallBarGraph selectedUser={userSelect}/>
+                <CallLineGraph selectedUser={userSelect}/>
             </main>
         );
     }
