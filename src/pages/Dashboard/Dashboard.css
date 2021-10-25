@@ -34,3 +34,9 @@
 .callLineGraph {
     margin: 0;
 }
+
+.dashboardTag {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}

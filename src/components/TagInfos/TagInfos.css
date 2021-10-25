@@ -1,0 +1,23 @@
+.tag {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #fbfbfb;
+    border-radius: 5px;
+    margin: 0
+}
+
+.tagValue {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.tag p {
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.tag img {
+    width: 60px;
+    margin: 1.8rem;
+}
