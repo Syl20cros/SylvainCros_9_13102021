@@ -19,3 +19,18 @@
     color: red;
     font-size: 48px;
 }
+
+.contentDashboard {
+    display: flex;
+    flex-direction: column;
+}
+
+.smallGraph {
+    width: 835px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.callLineGraph {
+    margin: 0;
+}

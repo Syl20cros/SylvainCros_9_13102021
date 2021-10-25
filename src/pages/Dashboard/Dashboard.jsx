@@ -5,6 +5,7 @@ import DashboardHeader from '../../components/DashboardHeader/DashboardHeader';
 import CallBarGraph from '../../components/BarGraph/CallBarGraph';
 import CallLineGraph from '../../components/LineGraph/CallLineGraph';
 import CallRadarGraph from '../../components/RadarGraph/CallRadarGraph';
+import RadialGraph from '../../components/RadialGraph/RadialGraph';
 
 function Dashboard() {
     const [userSelect, setUserSelect] = useState(null);
@@ -12,7 +13,7 @@ function Dashboard() {
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        API.getInitialUser(12)
+        API.getInitialUser(18)
             .then((response) => {
                 setUserSelect(response.data.data);
             })
@@ -33,9 +34,17 @@ function Dashboard() {
         return (
             <main className="dashboard">
                 <DashboardHeader selectedUser={userSelect}/>
-                <CallBarGraph selectedUser={userSelect}/>
-                <CallLineGraph selectedUser={userSelect}/>
-                <CallRadarGraph selectedUser={userSelect}/>
+                <div className="contentDashboard">
+                    <CallBarGraph selectedUser={userSelect}/>
+                    <div className="smallGraph">
+                        <CallLineGraph selectedUser={userSelect}/>
+                        <CallRadarGraph selectedUser={userSelect}/>
+                        <RadialGraph score={userSelect.todayScore*100}/>
+                    </div>
+                </div>
+                <div className="dashboardTag">
+
+                </div>
             </main>
         );
     }
