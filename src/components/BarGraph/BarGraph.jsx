@@ -67,7 +67,8 @@ function BarGraph({data}) {
               verticalAlign={'top'}
               iconType={'circle'}
               iconSize={'8'}
-              margin={{ top: 80, right: 0, left: 0, bottom: 47 }}/>
+              wrapperStyle={{paddingBottom: '50px'}}
+              />
           <Bar dataKey="kilogram" fill="#282D30" radius={[5, 5, 0, 0]} barSize={10}/>
           <Bar dataKey="calories" fill="#E60000" radius={[5, 5, 0, 0]} barSize={10}/>
         </BarChart>

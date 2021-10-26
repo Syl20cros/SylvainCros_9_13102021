@@ -6,9 +6,6 @@
     padding: 20px 0 0 0px;
     border-radius: 5px;
     margin-bottom: 2rem;
-    @media (max-width: 1024px) {
-        width: 100%;
-    }
 }
 
 .BarGraphTitle {
@@ -33,8 +30,4 @@
 .BarGraph .recharts-cartesian-axis-tick-value {
     font-size: 14px;
     fill: #9B9EAC;
-}
-
-.BarGraph .BarGraph.recharts-legend-wrapper {
-    padding-bottom: 47px;
 }

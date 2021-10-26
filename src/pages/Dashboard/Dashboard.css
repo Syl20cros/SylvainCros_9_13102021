@@ -22,6 +22,10 @@
 
 .contentDashboard {
     display: flex;
+}
+
+.graphs {
+    display: flex;
     flex-direction: column;
 }
 
@@ -29,6 +33,7 @@
     width: 835px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
 .callLineGraph {
@@ -36,7 +41,20 @@
 }
 
 .dashboardTag {
-    width: 100%;
     display: flex;
     flex-direction: column;
+    height: 615px;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:1300px) {
+    .contentDashboard {
+        flex-direction: column;
+    }
+    .dashboardTag {
+        flex-direction: row;
+        height: 124px;
+        justify-content: space-between;
+        width: 100%;
+    }
 }
