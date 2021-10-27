@@ -1,0 +1,24 @@
+{
+    "source": {
+      "include": ["."],
+      "includePattern": ".(jsx|js|ts|tsx)$",
+      "excludePattern": "(node_modules/|docs)"
+    },
+    "plugins": ["plugins/markdown"],
+    "templates": {
+      "cleverLinks": true,
+      "monospaceLinks": true
+    },
+    "opts": {
+      "recurse": true,
+      "destination": "./docs/",
+      "template": "./custom-template",
+      "tutorials": "./tutorials",
+      "readme": "./readme/readme.md"
+    },
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc", "closure"]
+      },
+      "sourceType": "module"
+  }

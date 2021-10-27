@@ -14,7 +14,7 @@ function Dashboard() {
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        API.getInitialUser(18)
+        API.getInitialUser(12)
             .then((response) => {
                 setUserSelect(response.data.data);
             })

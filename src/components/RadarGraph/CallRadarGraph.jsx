@@ -13,27 +13,27 @@ function CallRadarGraph(props) {
 
   useEffect(() => {
     API.getSessionIntensity(selectedUser.id)
-        .then((response) => {
-            setPerformance(
-                Format.performanceFormat(response)
-            );
-        })
-        .catch((error) => {
-            console.log(error);
-            setError(true);
-        })
-        .finally(() => {
-            setLoading(false);
-        });
-  }, [selectedUser]);
+      .then((response) => {
+        setPerformance(
+          Format.performanceFormat(response)
+        );
+      })
+      .catch((error) => {
+        console.log(error);
+        setError(true);
+      })
+      .finally(() => {
+        setLoading(false);
+  });
+}, [selectedUser]);
 
   if (loading) {
     return <div>Loading</div>;
   } else if (error) {
-      return <div>Erreur</div>;
+    return <div>Erreur</div>;
   } else {
-      return (
-      <RadarGraph input={performance}/>
+    return (
+    <RadarGraph input={performance}/>
     );
   }
 }
