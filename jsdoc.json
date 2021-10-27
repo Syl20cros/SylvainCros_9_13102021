@@ -1,24 +1,22 @@
 {
     "source": {
-      "include": ["."],
-      "includePattern": ".(jsx|js|ts|tsx)$",
-      "excludePattern": "(node_modules/|docs)"
+        "include": ["src"],
+        "includePattern": ".(jsx|js)$",
+        "excludePattern": "(node_modules/|docs)"
     },
-    "plugins": ["plugins/markdown"],
+    "plugins": ["plugins/markdown","node_modules/better-docs/component"],
     "templates": {
-      "cleverLinks": true,
-      "monospaceLinks": true
+        "cleverLinks": true,
+        "monospaceLinks": true
     },
     "opts": {
-      "recurse": true,
-      "destination": "./docs/",
-      "template": "./custom-template",
-      "tutorials": "./tutorials",
-      "readme": "./readme/readme.md"
+        "recurse": true,
+        "destination": "docs",
+        "readme": "README.md",
+        "template": "node_modules/better-docs"
     },
-    "tags": {
-        "allowUnknownTags": true,
-        "dictionaries": ["jsdoc", "closure"]
-      },
-      "sourceType": "module"
-  }
+    "tag": {
+        "allowUnknownTags": ["component"],
+        "dictionaries": ["jsdoc","closure"]
+    }
+}

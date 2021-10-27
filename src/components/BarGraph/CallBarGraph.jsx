@@ -4,7 +4,10 @@ import Format from '../../data/Format';
 import BarGraph from './BarGraph';
 import PropTypes from 'prop-types';
 
-
+/**
+ * Perform a user activity request to API and display bar graph with data response
+ * @component
+ */
 function CallBarGraph(props) {
   const { selectedUser } = props;
   const [activity, setActivity] = useState(null);

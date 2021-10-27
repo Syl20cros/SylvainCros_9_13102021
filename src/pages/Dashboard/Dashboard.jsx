@@ -8,13 +8,19 @@ import CallRadarGraph from '../../components/RadarGraph/CallRadarGraph';
 import RadialGraph from '../../components/RadialGraph/RadialGraph';
 import TagInfos from '../../components/TagInfos/TagInfos';
 
+/**
+ * Component showing the home page
+ * @component 
+ * @return {component} home page with all user's profil data
+ */
 function Dashboard() {
     const [userSelect, setUserSelect] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
+    const userID = 18;
 
     useEffect(() => {
-        API.getInitialUser(12)
+        API.getInitialUser(userID)
             .then((response) => {
                 setUserSelect(response.data.data);
             })

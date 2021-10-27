@@ -1,8 +1,9 @@
 import React from 'react';
 import './DashboardHeader.css';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 /**
+ * Display custum user message on top of dashboard
  * @component
  * @returns Custom welcome with firstName and a congratulation message
  */
@@ -26,5 +27,11 @@ function DashboardHeader(props) {
         );
 }
 
+DashboardHeader.propTypes = {
+    /**
+     * name of user
+     */
+    name: PropTypes.string.isRequired
+}
 
 export default DashboardHeader;

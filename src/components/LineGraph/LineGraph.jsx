@@ -3,7 +3,11 @@ import './LineGraph.css';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,  ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
 
-
+/**
+ * Component showing the user's data in line graph
+ * @component 
+ * @return {component} 
+ */
 function LineGraph({data, title}) {
 
   const week = {
@@ -24,7 +28,7 @@ function LineGraph({data, title}) {
   };
 
   /**
-  * Modify the tip bar chart
+  * Modify the tip bar graph
   * @param {object}  tooltip  {active , payload} 
   * @return html element with new payload value
   */

@@ -4,7 +4,10 @@ import Format from '../../data/Format';
 import RadarGraph from './RadarGraph';
 import PropTypes from 'prop-types';
 
-
+/**
+ * Perform a user intensity of session request to API and display radar graph with data response
+ * @component
+ */
 function CallRadarGraph(props) {
   const { selectedUser } = props;
   const [performance, setPerformance] = useState(null);

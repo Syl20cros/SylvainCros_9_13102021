@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './TagInfos.css'
 import caloriesIcon from '../../assets/calories-icon.png'
 import glucidesIcon from '../../assets/carbs-icon.png'
@@ -7,9 +7,9 @@ import proteinIcon from '../../assets/protein-icon.png'
 import PropTypes from 'prop-types'
 
 /**
- * Create custom tag with icon corresponding to type
- * 
+ * Create customs tags with icon corresponding to type
  * @component
+ * @return customs tags
  */
 function TagInfos({type, unit, value}){
     return(

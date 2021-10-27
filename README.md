@@ -8,7 +8,7 @@
 SportSee your day-to-day sport progress companion
 
 
-## 1. Project
+### 1. Project
 
 In the project directory, you can run:
 
@@ -16,20 +16,20 @@ In the project directory, you can run:
 
 ### `npm start`
 
-## 2. Backend project
+### 2. Backend project
 
 [Backend repository](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
 
 This repo contains all the source code to run the micro API for the sports analytics dashboard.
 
-### 2.1 Prerequisites
+## 2.1 Prerequisites
 
 - [NodeJS (**version 12.18**)](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/)
 
 If you are working with several versions of NodeJS, we recommend you install [nvm](https://github.com/nvm-sh/nvm). This tool will allow you to easily manage your NodeJS versions.
 
-### 2.2 Launching the backend project
+## 2.2 Launching the backend project
 
 - Fork the repository
 - Clone it on your computer.
@@ -38,7 +38,7 @@ If you are working with several versions of NodeJS, we recommend you install [nv
 
 ## 2.3. Endpoints
 
-### 2.3.1 Possible endpoints
+## 2.3.1 Possible endpoints
 
 This project includes four endpoints that you will be able to use: 
 
@@ -50,19 +50,18 @@ This project includes four endpoints that you will be able to use:
 
 **Warning, currently only two users have been mocked. They have userId 12 and 18 respectively.**
 
-### 2.3.2 Examples of queries
+## 2.3.2 Examples of queries
 
 - `http://localhost:3000/user/12/performance` - Retrieves the performance of the user with id 12
 - `http://localhost:3000/user/18` - Retrieves user 18's main information.
 
-## 3. Update documentation
+### 3. Update documentation
 
-### `npm run docs`
+## `npm run docs`
 
-Use Jsdoc and better-docs to comment the code to keep the documentation up to date.
+Use [Jsdoc](https://jsdoc.app/index.html) and [better-docs](https://github.com/SoftwareBrothers/better-docs) to comment the code to keep the documentation up to date.
 
-## 4. Libreries
+### 4. Libreries
 
 - [Axios](https://www.npmjs.com/package/axios) - Free API resquest library.
-- [D3.v6](https://d3js.org/) - Library for manipulating documents based on data.
-- [React-router-dom](https://reactrouter.com/) - Collection of navigational components that compose declaratively with your application.
+- [Recharts](https://recharts.org/en-US/) - Library for manipulating documents based on data.

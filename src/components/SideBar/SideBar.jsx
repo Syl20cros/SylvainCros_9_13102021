@@ -5,6 +5,10 @@ import icon_swim from '../../assets/icon_swim.png';
 import icon_bike from '../../assets/icon_bike.png';
 import icon_muscu from '../../assets/icon_muscu.png';
 
+/**
+ * @component
+ * @returns lateral side bar with sport icons and copyright
+ */
 function SideBar() {
         return (
             <div className="SideBar">
@@ -22,7 +26,7 @@ function SideBar() {
                         <img src={icon_muscu} alt="icon_muscu" />
                     </a>
                 </nav>
-                <p className="copiryght">Copiryght, SportSee 2020</p>
+                <p className="copyright">Copyright, SportSee {new Date().getFullYear()}</p>
             </div>
         );
 }

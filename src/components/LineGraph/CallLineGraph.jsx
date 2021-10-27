@@ -4,7 +4,10 @@ import Format from '../../data/Format';
 import LineGraph from './LineGraph';
 import PropTypes from 'prop-types';
 
-
+/**
+ * Perform a user duration of activity request to API and display line graph with data response
+ * @component
+ */
 function CallLineGraph(props) {
   const { selectedUser } = props;
   const [duration, setDuration] = useState(null);

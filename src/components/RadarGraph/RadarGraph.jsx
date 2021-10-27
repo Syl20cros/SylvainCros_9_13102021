@@ -3,13 +3,16 @@ import './RadarGraph.css';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
 
-
+/**
+ * Component showing the user's input in radar graph
+ * @component 
+ * @return {component} 
+ */
 function RadarGraph({input}) {
-
   /**
-     * Put first letter of each tick in uppercase, cardio becomes Cardio
-     * @returns user activity intensity sessions
-     */
+   * Put first letter of each tick in uppercase, cardio becomes Cardio
+   * @returns user activity intensity sessions
+   */
   const CustomPolarAngleAxis = (tick) => {
     return input.kind[tick].charAt(0).toUpperCase() + input.kind[tick].slice(1);
   };
@@ -35,7 +38,7 @@ function RadarGraph({input}) {
 
 RadarGraph.propTypes = {
   /**
-   * object is required
+   * input is data to fill the graph
    */
    input: PropTypes.object.isRequired
 };

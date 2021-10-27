@@ -3,7 +3,11 @@ import './RadialGraph.css';
 import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
 
-
+/**
+ * Component showing the user's daily score in radial graph
+ * @component 
+ * @return {component} 
+ */
 function RadialGraph({score}) {
 
   console.log(score);
@@ -53,7 +57,7 @@ function RadialGraph({score}) {
 
 RadialGraph.propTypes = {
   /**
-   * data is an array
+   * score is percent of daily aim
    */
    score: PropTypes.number.isRequired
 };

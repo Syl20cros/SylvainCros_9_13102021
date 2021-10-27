@@ -2,6 +2,12 @@ import React from 'react';
 import './Header.css';
 import logo from '../../assets/fullLogo.svg';
 
+/**
+ * Component showing the main Header and navigation bar
+ *  @component
+ * 
+ *  @return {component}
+ */
 function Header() {
         return (
             <header className="header">

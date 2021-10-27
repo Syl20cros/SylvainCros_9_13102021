@@ -3,11 +3,15 @@ import './BarGraph.css';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
 
-
+/**
+ * Component showing the user's data in bar graph
+ * @component 
+ * @return {component} 
+ */
 function BarGraph({data}) {
   
   /**
-  * Modify the tip bar chart
+  * Modify the tip bar graph
   * @param {object}  tooltip  {active , payload} 
   * @return html element with new payload value
   */
@@ -24,9 +28,9 @@ function BarGraph({data}) {
   };
 
   /**
-  * the style and texte of bar chart legend
+  * Modify the style and texte of bar graph legend
   * @param {string} value actual legend text 
-  * @return html element
+  * @return html element with new value
   */
   const CustomLegend = (value) => {
     const style  = {color : "#74798C", fontSize : "14px"}
