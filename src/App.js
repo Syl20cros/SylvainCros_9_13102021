@@ -7,9 +7,9 @@ import Dashboard from './pages/Dashboard/Dashboard';
 function App() {
   return (
     <React.Fragment>
-            <Header />
-            <SideBar />
-            <Dashboard />
+      <Header />
+      <SideBar />
+      <Dashboard />
     </React.Fragment>
   );
 }

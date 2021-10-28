@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
  * @component 
  * @return {component} 
  */
-function RadialGraph({score}) {
+function RadialGraph({ score }) {
 
   console.log(score);
 
@@ -59,7 +59,7 @@ RadialGraph.propTypes = {
   /**
    * score is percent of daily aim
    */
-   score: PropTypes.number.isRequired
+  score: PropTypes.number.isRequired
 };
 
 export default RadialGraph;

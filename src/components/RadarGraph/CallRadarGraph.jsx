@@ -27,8 +27,8 @@ function CallRadarGraph(props) {
       })
       .finally(() => {
         setLoading(false);
-  });
-}, [selectedUser]);
+      });
+  }, [selectedUser]);
 
   if (loading) {
     return <div>Loading</div>;
@@ -36,7 +36,7 @@ function CallRadarGraph(props) {
     return <div>Erreur</div>;
   } else {
     return (
-    <RadarGraph input={performance}/>
+      <RadarGraph input={performance} />
     );
   }
 }
@@ -46,7 +46,7 @@ CallRadarGraph.propTypes = {
   /**
    * User selected
    */
-   selectedUser: PropTypes.object.isRequired
+  selectedUser: PropTypes.object.isRequired
 };
 
 export default CallRadarGraph;

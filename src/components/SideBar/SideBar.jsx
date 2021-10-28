@@ -10,25 +10,25 @@ import icon_muscu from '../../assets/icon_muscu.png';
  * @returns lateral side bar with sport icons and copyright
  */
 function SideBar() {
-        return (
-            <div className="SideBar">
-                <nav>
-                    <a href="*">
-                        <img src={icon_yoga} alt="icon_yoga" />
-                    </a>
-                    <a href="*">
-                        <img src={icon_swim} alt="icon_swim" />
-                    </a>
-                    <a href="*">
-                        <img src={icon_bike} alt="icon_bike" />
-                    </a>
-                    <a href="*">
-                        <img src={icon_muscu} alt="icon_muscu" />
-                    </a>
-                </nav>
-                <p className="copyright">Copyright, SportSee {new Date().getFullYear()}</p>
-            </div>
-        );
+    return (
+        <div className="SideBar">
+            <nav>
+                <a href="*">
+                    <img src={icon_yoga} alt="icon_yoga" />
+                </a>
+                <a href="*">
+                    <img src={icon_swim} alt="icon_swim" />
+                </a>
+                <a href="*">
+                    <img src={icon_bike} alt="icon_bike" />
+                </a>
+                <a href="*">
+                    <img src={icon_muscu} alt="icon_muscu" />
+                </a>
+            </nav>
+            <p className="copyright">Copyright, SportSee {new Date().getFullYear()}</p>
+        </div>
+    );
 }
 
 export default SideBar;

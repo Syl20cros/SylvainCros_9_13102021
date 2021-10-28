@@ -9,22 +9,22 @@ import PropTypes from 'prop-types';
  */
 function DashboardHeader(props) {
 
-        const { selectedUser } = props;
+    const { selectedUser } = props;
 
-        let message;
+    let message;
 
-        /*If calorieCount is < 2000 then message takes a value else it takes another*/
-        if (selectedUser.keyData.calorieCount < 2000) {
-            message = 'On y est presque, un petit effort 💪';
-        } else {
-            message = 'Félicitation ! Vous avez explosé vos objectifs hier 👏';
-        }
-        return (
-            <section className="DashboardHeader">
-                <h2 className="DashboardHeaderhello">Bonjour <span>{selectedUser.userInfos.firstName}</span></h2>
-                <p className="DashboardHeaderMessage">{message}</p>
-            </section>
-        );
+    /*If calorieCount is < 2000 then message takes a value else it takes another*/
+    if (selectedUser.keyData.calorieCount < 2000) {
+        message = 'On y est presque, un petit effort 💪';
+    } else {
+        message = 'Félicitation ! Vous avez explosé vos objectifs hier 👏';
+    }
+    return (
+        <section className="DashboardHeader">
+            <h2 className="DashboardHeaderhello">Bonjour <span>{selectedUser.userInfos.firstName}</span></h2>
+            <p className="DashboardHeaderMessage">{message}</p>
+        </section>
+    );
 }
 
 DashboardHeader.propTypes = {

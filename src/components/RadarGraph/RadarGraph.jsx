@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
  * @component 
  * @return {component} 
  */
-function RadarGraph({input}) {
+function RadarGraph({ input }) {
   /**
    * Put first letter of each tick in uppercase, cardio becomes Cardio
    * @returns user activity intensity sessions
@@ -21,15 +21,15 @@ function RadarGraph({input}) {
     <section className="RadarGraph">
       <ResponsiveContainer width="100%" height="100%">
         <RadarChart data={input.data} cx={'center'} cy={'center'} outerRadius={75} >
-              <PolarGrid radialLines={false} />
-              <PolarAngleAxis
-                  tickFormatter={CustomPolarAngleAxis}
-                  dataKey="kind"
-                  stroke="white"
-                  tickLine={false}
-                  fontSize={12}
-              />
-              <Radar dataKey="value" fill="red" fillOpacity={0.7} />
+          <PolarGrid radialLines={false} />
+          <PolarAngleAxis
+            tickFormatter={CustomPolarAngleAxis}
+            dataKey="kind"
+            stroke="white"
+            tickLine={false}
+            fontSize={12}
+          />
+          <Radar dataKey="value" fill="red" fillOpacity={0.7} />
         </RadarChart>
       </ResponsiveContainer>
     </section>
@@ -40,7 +40,7 @@ RadarGraph.propTypes = {
   /**
    * input is data to fill the graph
    */
-   input: PropTypes.object.isRequired
+  input: PropTypes.object.isRequired
 };
 
 export default RadarGraph;

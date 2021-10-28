@@ -8,8 +8,8 @@ import PropTypes from 'prop-types';
  * @component 
  * @return {component} 
  */
-function BarGraph({data}) {
-  
+function BarGraph({ data }) {
+
   /**
   * Modify the tip bar graph
   * @param {object}  tooltip  {active , payload} 
@@ -33,9 +33,9 @@ function BarGraph({data}) {
   * @return html element with new value
   */
   const CustomLegend = (value) => {
-    const style  = {color : "#74798C", fontSize : "14px"}
+    const style = { color: "#74798C", fontSize: "14px" }
     value = value === "kilogram" ? "Poids (kg)" : "Calories brûlées (Kcal)"
-    return <span style={style}>{value}</span>   
+    return <span style={style}>{value}</span>
   };
 
   return (
@@ -47,34 +47,34 @@ function BarGraph({data}) {
           height={300}
           data={data}
           margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
           }}
         >
           <CartesianGrid
             strokeDasharray="3 3"
-            vertical={false}/>
+            vertical={false} />
           <XAxis
             dataKey={'index'}
-            tickLine={false}/>
+            tickLine={false} />
           <YAxis
-              tickLine={false} 
-              tickCount={3}
-              orientation={'right'}
-              axisLine={false}/>
-          <Tooltip content={<CustomTooltip />}/>
-          <Legend 
-              formatter={CustomLegend}
-              align={'right'}
-              verticalAlign={'top'}
-              iconType={'circle'}
-              iconSize={'8'}
-              wrapperStyle={{paddingBottom: '50px'}}
-              />
-          <Bar dataKey="kilogram" fill="#282D30" radius={[5, 5, 0, 0]} barSize={10}/>
-          <Bar dataKey="calories" fill="#E60000" radius={[5, 5, 0, 0]} barSize={10}/>
+            tickLine={false}
+            tickCount={3}
+            orientation={'right'}
+            axisLine={false} />
+          <Tooltip content={<CustomTooltip />} />
+          <Legend
+            formatter={CustomLegend}
+            align={'right'}
+            verticalAlign={'top'}
+            iconType={'circle'}
+            iconSize={'8'}
+            wrapperStyle={{ paddingBottom: '50px' }}
+          />
+          <Bar dataKey="kilogram" fill="#282D30" radius={[5, 5, 0, 0]} barSize={10} />
+          <Bar dataKey="calories" fill="#E60000" radius={[5, 5, 0, 0]} barSize={10} />
         </BarChart>
       </ResponsiveContainer>
     </section>

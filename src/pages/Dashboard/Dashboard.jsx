@@ -40,35 +40,35 @@ function Dashboard() {
     } else {
         return (
             <main className="dashboard">
-                <DashboardHeader selectedUser={userSelect}/>
+                <DashboardHeader selectedUser={userSelect} />
                 <div className="contentDashboard">
                     <div className="graphs">
-                        <CallBarGraph selectedUser={userSelect}/>
+                        <CallBarGraph selectedUser={userSelect} />
                         <div className="smallGraph">
-                            <CallLineGraph selectedUser={userSelect}/>
-                            <CallRadarGraph selectedUser={userSelect}/>
-                            <RadialGraph score={userSelect.todayScore*100}/>
+                            <CallLineGraph selectedUser={userSelect} />
+                            <CallRadarGraph selectedUser={userSelect} />
+                            <RadialGraph score={userSelect.todayScore * 100} />
                         </div>
                     </div>
                     <aside className="dashboardTag">
-                        <TagInfos 
-                            value={userSelect.keyData.calorieCount/1000}
+                        <TagInfos
+                            value={userSelect.keyData.calorieCount / 1000}
                             type='Calories'
                             unit='kCal'
                         />
-                        <TagInfos 
-                            value={userSelect.keyData.proteinCount} 
-                            type='Proteines' 
+                        <TagInfos
+                            value={userSelect.keyData.proteinCount}
+                            type='Proteines'
                             unit='g'
                         />
-                        <TagInfos 
-                            value={userSelect.keyData.carbohydrateCount} 
-                            type='Glucides' 
+                        <TagInfos
+                            value={userSelect.keyData.carbohydrateCount}
+                            type='Glucides'
                             unit='g'
                         />
-                        <TagInfos 
-                            value={userSelect.keyData.lipidCount} 
-                            type='Lipides' 
+                        <TagInfos
+                            value={userSelect.keyData.lipidCount}
+                            type='Lipides'
                             unit='g'
                         />
                     </aside>

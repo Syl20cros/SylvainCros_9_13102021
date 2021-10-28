@@ -11,8 +11,8 @@ import PropTypes from 'prop-types'
  * @component
  * @return customs tags
  */
-function TagInfos({type, unit, value}){
-    return(
+function TagInfos({ type, unit, value }) {
+    return (
         <div className='tag'>
             {(() => {
                 switch (type) {
@@ -27,7 +27,7 @@ function TagInfos({type, unit, value}){
 
                     case 'Lipides':
                         return <img src={lipidesIcon} alt="icon lipides" />;
-                
+
                     default:
                         return null
                 }
