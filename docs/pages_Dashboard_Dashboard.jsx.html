@@ -41,6 +41,10 @@
             <span aria-hidden="true"></span>
         </a>
         <div class="logo">
+             
+                <a class="image" href="index.html">
+                    <img src="../src/assets/fullLogo.svg" alt="logo">
+                </a>
             
             
         </div>
@@ -104,9 +108,10 @@ function Dashboard() {
     const [userSelect, setUserSelect] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
+    const userID = 18;
 
     useEffect(() => {
-        API.getInitialUser(12)
+        API.getInitialUser(userID)
             .then((response) => {
                 setUserSelect(response.data.data);
             })
@@ -126,35 +131,35 @@ function Dashboard() {
     } else {
         return (
             &lt;main className="dashboard">
-                &lt;DashboardHeader selectedUser={userSelect}/>
+                &lt;DashboardHeader selectedUser={userSelect} />
                 &lt;div className="contentDashboard">
                     &lt;div className="graphs">
-                        &lt;CallBarGraph selectedUser={userSelect}/>
+                        &lt;CallBarGraph selectedUser={userSelect} />
                         &lt;div className="smallGraph">
-                            &lt;CallLineGraph selectedUser={userSelect}/>
-                            &lt;CallRadarGraph selectedUser={userSelect}/>
-                            &lt;RadialGraph score={userSelect.todayScore*100}/>
+                            &lt;CallLineGraph selectedUser={userSelect} />
+                            &lt;CallRadarGraph selectedUser={userSelect} />
+                            &lt;RadialGraph score={userSelect.todayScore * 100} />
                         &lt;/div>
                     &lt;/div>
                     &lt;aside className="dashboardTag">
-                        &lt;TagInfos 
-                            value={userSelect.keyData.calorieCount/1000}
+                        &lt;TagInfos
+                            value={userSelect.keyData.calorieCount / 1000}
                             type='Calories'
                             unit='kCal'
                         />
-                        &lt;TagInfos 
-                            value={userSelect.keyData.proteinCount} 
-                            type='Proteines' 
+                        &lt;TagInfos
+                            value={userSelect.keyData.proteinCount}
+                            type='Proteines'
                             unit='g'
                         />
-                        &lt;TagInfos 
-                            value={userSelect.keyData.carbohydrateCount} 
-                            type='Glucides' 
+                        &lt;TagInfos
+                            value={userSelect.keyData.carbohydrateCount}
+                            type='Glucides'
                             unit='g'
                         />
-                        &lt;TagInfos 
-                            value={userSelect.keyData.lipidCount} 
-                            type='Lipides' 
+                        &lt;TagInfos
+                            value={userSelect.keyData.lipidCount}
+                            type='Lipides'
                             unit='g'
                         />
                     &lt;/aside>

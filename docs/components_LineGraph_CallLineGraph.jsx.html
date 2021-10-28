@@ -41,6 +41,10 @@
             <span aria-hidden="true"></span>
         </a>
         <div class="logo">
+             
+                <a class="image" href="index.html">
+                    <img src="../src/assets/fullLogo.svg" alt="logo">
+                </a>
             
             
         </div>
@@ -96,46 +100,46 @@ import PropTypes from 'prop-types';
  * @component
  */
 function CallLineGraph(props) {
-  const { selectedUser } = props;
-  const [duration, setDuration] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+    const { selectedUser } = props;
+    const [duration, setDuration] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
 
-  useEffect(() => {
-    API.getSessionDuration(selectedUser.id)
-        .then((response) => {
-            setDuration(
-                Format.durationFormat(response).map((duration, i) => {
-                    return { ...duration, index: i + 1 };
-                })
-            );
-        })
-        .catch((error) => {
-            console.log(error);
-            setError(true);
-        })
-        .finally(() => {
-            setLoading(false);
-        });
-  }, [selectedUser]);
+    useEffect(() => {
+        API.getSessionDuration(selectedUser.id)
+            .then((response) => {
+                setDuration(
+                    Format.durationFormat(response).map((duration, i) => {
+                        return { ...duration, index: i + 1 };
+                    })
+                );
+            })
+            .catch((error) => {
+                console.log(error);
+                setError(true);
+            })
+            .finally(() => {
+                setLoading(false);
+            });
+    }, [selectedUser]);
 
 
-  if (loading) {
-    return &lt;div>Loading&lt;/div>;
-  } else if (error) {
-      return &lt;div>Erreur&lt;/div>;
-  } else {
-      return (
-      &lt;LineGraph data={duration} title="Durée moyenne des sessions"/>
-    );
-  }
+    if (loading) {
+        return &lt;div>Loading&lt;/div>;
+    } else if (error) {
+        return &lt;div>Erreur&lt;/div>;
+    } else {
+        return (
+            &lt;LineGraph data={duration} title="Durée moyenne des sessions" />
+        );
+    }
 }
 
 
 CallLineGraph.propTypes = {
-   /**
-   * User selected
-   */
+    /**
+    * User selected
+    */
     selectedUser: PropTypes.object.isRequired
 };
 

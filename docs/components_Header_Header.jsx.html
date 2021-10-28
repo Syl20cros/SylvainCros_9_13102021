@@ -41,6 +41,10 @@
             <span aria-hidden="true"></span>
         </a>
         <div class="logo">
+             
+                <a class="image" href="index.html">
+                    <img src="../src/assets/fullLogo.svg" alt="logo">
+                </a>
             
             
         </div>
@@ -96,19 +100,19 @@ import logo from '../../assets/fullLogo.svg';
  *  @return {component}
  */
 function Header() {
-        return (
-            &lt;header className="header">
-                &lt;a href="*" className='logo'>
-                    &lt;img src={logo} alt="logo-SportSee" />
-                &lt;/a>
-                &lt;nav>
-                    &lt;a href="*">Accueil&lt;/a>
-                    &lt;a href="*">Profil&lt;/a>
-                    &lt;a href="*">Réglage&lt;/a>
-                    &lt;a href="*">Communauté&lt;/a>
-                &lt;/nav>
-            &lt;/header>
-        );
+    return (
+        &lt;header className="header">
+            &lt;a href="*" className='logo'>
+                &lt;img src={logo} alt="logo-SportSee" />
+            &lt;/a>
+            &lt;nav>
+                &lt;a href="*">Accueil&lt;/a>
+                &lt;a href="*">Profil&lt;/a>
+                &lt;a href="*">Réglage&lt;/a>
+                &lt;a href="*">Communauté&lt;/a>
+            &lt;/nav>
+        &lt;/header>
+    );
 }
 
 export default Header;

@@ -41,6 +41,10 @@
             <span aria-hidden="true"></span>
         </a>
         <div class="logo">
+             
+                <a class="image" href="index.html">
+                    <img src="../src/assets/fullLogo.svg" alt="logo">
+                </a>
             
             
         </div>
@@ -96,22 +100,22 @@ import PropTypes from 'prop-types';
  */
 function DashboardHeader(props) {
 
-        const { selectedUser } = props;
+    const { selectedUser } = props;
 
-        let message;
+    let message;
 
-        /*If calorieCount is &lt; 2000 then message takes a value else it takes another*/
-        if (selectedUser.keyData.calorieCount &lt; 2000) {
-            message = 'On y est presque, un petit effort 💪';
-        } else {
-            message = 'Félicitation ! Vous avez explosé vos objectifs hier 👏';
-        }
-        return (
-            &lt;section className="DashboardHeader">
-                &lt;h2 className="DashboardHeaderhello">Bonjour &lt;span>{selectedUser.userInfos.firstName}&lt;/span>&lt;/h2>
-                &lt;p className="DashboardHeaderMessage">{message}&lt;/p>
-            &lt;/section>
-        );
+    /*If calorieCount is &lt; 2000 then message takes a value else it takes another*/
+    if (selectedUser.keyData.calorieCount &lt; 2000) {
+        message = 'On y est presque, un petit effort 💪';
+    } else {
+        message = 'Félicitation ! Vous avez explosé vos objectifs hier 👏';
+    }
+    return (
+        &lt;section className="DashboardHeader">
+            &lt;h2 className="DashboardHeaderhello">Bonjour &lt;span>{selectedUser.userInfos.firstName}&lt;/span>&lt;/h2>
+            &lt;p className="DashboardHeaderMessage">{message}&lt;/p>
+        &lt;/section>
+    );
 }
 
 DashboardHeader.propTypes = {

@@ -41,6 +41,10 @@
             <span aria-hidden="true"></span>
         </a>
         <div class="logo">
+             
+                <a class="image" href="index.html">
+                    <img src="../src/assets/fullLogo.svg" alt="logo">
+                </a>
             
             
         </div>
@@ -95,7 +99,7 @@ import PropTypes from 'prop-types';
  * @component 
  * @return {component} 
  */
-function RadarGraph({input}) {
+function RadarGraph({ input }) {
   /**
    * Put first letter of each tick in uppercase, cardio becomes Cardio
    * @returns user activity intensity sessions
@@ -108,15 +112,15 @@ function RadarGraph({input}) {
     &lt;section className="RadarGraph">
       &lt;ResponsiveContainer width="100%" height="100%">
         &lt;RadarChart data={input.data} cx={'center'} cy={'center'} outerRadius={75} >
-              &lt;PolarGrid radialLines={false} />
-              &lt;PolarAngleAxis
-                  tickFormatter={CustomPolarAngleAxis}
-                  dataKey="kind"
-                  stroke="white"
-                  tickLine={false}
-                  fontSize={12}
-              />
-              &lt;Radar dataKey="value" fill="red" fillOpacity={0.7} />
+          &lt;PolarGrid radialLines={false} />
+          &lt;PolarAngleAxis
+            tickFormatter={CustomPolarAngleAxis}
+            dataKey="kind"
+            stroke="white"
+            tickLine={false}
+            fontSize={12}
+          />
+          &lt;Radar dataKey="value" fill="red" fillOpacity={0.7} />
         &lt;/RadarChart>
       &lt;/ResponsiveContainer>
     &lt;/section>
@@ -127,7 +131,7 @@ RadarGraph.propTypes = {
   /**
    * input is data to fill the graph
    */
-   input: PropTypes.object.isRequired
+  input: PropTypes.object.isRequired
 };
 
 export default RadarGraph;

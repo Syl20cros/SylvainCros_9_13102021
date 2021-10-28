@@ -41,6 +41,10 @@
             <span aria-hidden="true"></span>
         </a>
         <div class="logo">
+             
+                <a class="image" href="index.html">
+                    <img src="../src/assets/fullLogo.svg" alt="logo">
+                </a>
             
             
         </div>
@@ -114,8 +118,8 @@ function CallRadarGraph(props) {
       })
       .finally(() => {
         setLoading(false);
-  });
-}, [selectedUser]);
+      });
+  }, [selectedUser]);
 
   if (loading) {
     return &lt;div>Loading&lt;/div>;
@@ -123,7 +127,7 @@ function CallRadarGraph(props) {
     return &lt;div>Erreur&lt;/div>;
   } else {
     return (
-    &lt;RadarGraph input={performance}/>
+      &lt;RadarGraph input={performance} />
     );
   }
 }
@@ -133,7 +137,7 @@ CallRadarGraph.propTypes = {
   /**
    * User selected
    */
-   selectedUser: PropTypes.object.isRequired
+  selectedUser: PropTypes.object.isRequired
 };
 
 export default CallRadarGraph;

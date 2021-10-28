@@ -41,6 +41,10 @@
             <span aria-hidden="true"></span>
         </a>
         <div class="logo">
+             
+                <a class="image" href="index.html">
+                    <img src="../src/assets/fullLogo.svg" alt="logo">
+                </a>
             
             
         </div>
@@ -98,8 +102,8 @@ import PropTypes from 'prop-types'
  * @component
  * @return customs tags
  */
-function TagInfos({type, unit, value}){
-    return(
+function TagInfos({ type, unit, value }) {
+    return (
         &lt;div className='tag'>
             {(() => {
                 switch (type) {
@@ -114,7 +118,7 @@ function TagInfos({type, unit, value}){
 
                     case 'Lipides':
                         return &lt;img src={lipidesIcon} alt="icon lipides" />;
-                
+
                     default:
                         return null
                 }

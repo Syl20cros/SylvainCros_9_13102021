@@ -41,6 +41,10 @@
             <span aria-hidden="true"></span>
         </a>
         <div class="logo">
+             
+                <a class="image" href="index.html">
+                    <img src="../src/assets/fullLogo.svg" alt="logo">
+                </a>
             
             
         </div>
@@ -97,25 +101,25 @@ import icon_muscu from '../../assets/icon_muscu.png';
  * @returns lateral side bar with sport icons and copyright
  */
 function SideBar() {
-        return (
-            &lt;div className="SideBar">
-                &lt;nav>
-                    &lt;a href="*">
-                        &lt;img src={icon_yoga} alt="icon_yoga" />
-                    &lt;/a>
-                    &lt;a href="*">
-                        &lt;img src={icon_swim} alt="icon_swim" />
-                    &lt;/a>
-                    &lt;a href="*">
-                        &lt;img src={icon_bike} alt="icon_bike" />
-                    &lt;/a>
-                    &lt;a href="*">
-                        &lt;img src={icon_muscu} alt="icon_muscu" />
-                    &lt;/a>
-                &lt;/nav>
-                &lt;p className="copiryght">Copyright, SportSee {new Date().getFullYear()}&lt;/p>
-            &lt;/div>
-        );
+    return (
+        &lt;div className="SideBar">
+            &lt;nav>
+                &lt;a href="*">
+                    &lt;img src={icon_yoga} alt="icon_yoga" />
+                &lt;/a>
+                &lt;a href="*">
+                    &lt;img src={icon_swim} alt="icon_swim" />
+                &lt;/a>
+                &lt;a href="*">
+                    &lt;img src={icon_bike} alt="icon_bike" />
+                &lt;/a>
+                &lt;a href="*">
+                    &lt;img src={icon_muscu} alt="icon_muscu" />
+                &lt;/a>
+            &lt;/nav>
+            &lt;p className="copyright">Copyright, SportSee {new Date().getFullYear()}&lt;/p>
+        &lt;/div>
+    );
 }
 
 export default SideBar;
