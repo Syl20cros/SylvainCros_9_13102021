@@ -107,31 +107,39 @@
         <article><p><a href="https://forthebadge.com"><img src="https://forthebadge.com/images/badges/made-with-javascript.svg" alt="forthebadge"></a>
 <a href="https://forthebadge.com"><img src="https://forthebadge.com/images/badges/uses-css.svg" alt="forthebadge"></a>
 <a href="https://icons8.com/icon/123603/react-native"><img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React Logo"></a></p>
-<h1>SportSee : <strong>The most powerful sport coaching</strong></h1>
+<h2>SportSee : <strong>The most powerful sport coaching</strong></h2>
 <p>SportSee your day-to-day sport progress companion</p>
-<h3>1. Project</h3>
-<p>In the project directory, you can run:</p>
-<h3><code>npm install</code></h3>
-<h3><code>npm start</code></h3>
-<h3>2. Backend project</h3>
+<h2>1. Project</h2>
+<h3>1.1 Prerequisites</h3>
+<p>IDE like <a href="https://code.visualstudio.com/">Visual Studio Code</a></p>
+<h3>2.2 Launching project</h3>
+<ul>
+<li>
+<p><code>npm install</code></p>
+</li>
+<li>
+<p><code>npm start</code></p>
+</li>
+</ul>
+<h2>2. Backend project</h2>
 <p><a href="https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard">Backend repository</a></p>
 <p>This repo contains all the source code to run the micro API for the sports analytics dashboard.</p>
-<h2>2.1 Prerequisites</h2>
+<h3>2.1 Prerequisites</h3>
 <ul>
 <li><a href="https://nodejs.org/en/">NodeJS (<strong>version 12.18</strong>)</a></li>
 <li><a href="https://yarnpkg.com/">Yarn</a></li>
 <li>IDE like <a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
 </ul>
 <p>If you are working with several versions of NodeJS, we recommend you install <a href="https://github.com/nvm-sh/nvm">nvm</a>. This tool will allow you to easily manage your NodeJS versions.</p>
-<h2>2.2 Launching the backend project</h2>
+<h3>2.2 Launching the backend project</h3>
 <ul>
 <li>Fork the repository</li>
 <li>Clone it on your computer.</li>
 <li>The <code>yarn</code> command will allow you to install the dependencies.</li>
 <li>The <code>yarn dev</code> command will allow you to run the micro API.</li>
 </ul>
-<h2>2.3. Endpoints</h2>
-<h2>2.3.1 Possible endpoints</h2>
+<h3>2.3. Endpoints</h3>
+<h4>2.3.1 Possible endpoints</h4>
 <p>This project includes four endpoints that you will be able to use:</p>
 <ul>
 <li><code>http://localhost:3000/user/${userId}</code> - retrieves information from a user. This first endpoint includes the user id, user information (first name, last name and age), the current day's score (todayScore) and key data (calorie, macronutrient, etc.).</li>
@@ -140,15 +148,15 @@
 <li><code>http://localhost:3000/user/${userId}/performance</code> - retrieves a user's performance (energy, endurance, etc.).</li>
 </ul>
 <p><strong>Warning, currently only two users have been mocked. They have userId 12 and 18 respectively.</strong></p>
-<h2>2.3.2 Examples of queries</h2>
+<h4>2.3.2 Examples of queries</h4>
 <ul>
 <li><code>http://localhost:3000/user/12/performance</code> - Retrieves the performance of the user with id 12</li>
 <li><code>http://localhost:3000/user/18</code> - Retrieves user 18's main information.</li>
 </ul>
-<h3>3. Update documentation</h3>
-<h2><code>npm run docs</code></h2>
+<h2>3. Update documentation</h2>
+<h3><code>npm run docs</code></h3>
 <p>Use <a href="https://jsdoc.app/index.html">Jsdoc</a> and <a href="https://github.com/SoftwareBrothers/better-docs">better-docs</a> to comment the code to keep the documentation up to date.</p>
-<h3>4. Libreries</h3>
+<h2>4. Libreries</h2>
 <ul>
 <li><a href="https://www.npmjs.com/package/axios">Axios</a> - Free API resquest library.</li>
 <li><a href="https://recharts.org/en-US/">Recharts</a> - Library for manipulating documents based on data.</li>
