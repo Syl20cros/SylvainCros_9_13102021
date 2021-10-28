@@ -1,6 +1,9 @@
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
-[![React Logo](https://img.icons8.com/color/48/000000/react-native.png)](https://icons8.com/icon/123603/react-native)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+
+[![react](https://img.shields.io/badge/MADE%20WITH-REACT-informational?style=for-the-badge)](https://icons8.com/icon/123603/react-native)
+[![Made by](https://img.shields.io/badge/MADE%20BY-SYLVAIN%20CROS-orange?style=for-the-badge)](https://github.com/Syl20cros)
 
 ## SportSee : **The most powerful sport coaching**
 
