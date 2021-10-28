@@ -26,6 +26,7 @@ This repo contains all the source code to run the micro API for the sports analy
 
 - [NodeJS (**version 12.18**)](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/)
+- IDE like [Visual Studio Code](https://code.visualstudio.com/)
 
 If you are working with several versions of NodeJS, we recommend you install [nvm](https://github.com/nvm-sh/nvm). This tool will allow you to easily manage your NodeJS versions.
 
