@@ -97,12 +97,10 @@ import PropTypes from 'prop-types';
 /**
  * Component showing the user's daily score in radial graph
  * @component 
+ * @param {number} score: user score in %
  * @return {component} 
  */
 function RadialGraph({ score }) {
-
-  console.log(score);
-
   const data = [
     {
       uv: score,

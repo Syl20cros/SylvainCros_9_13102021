@@ -6,11 +6,13 @@ import PropTypes from 'prop-types';
 /**
  * Component showing the user's input in radar graph
  * @component 
+ * @param {array} input: sessions intensitys of user on array
  * @return {component} 
  */
 function RadarGraph({ input }) {
   /**
    * Put first letter of each tick in uppercase, cardio becomes Cardio
+   * @param {string} tick
    * @returns user activity intensity sessions
    */
   const CustomPolarAngleAxis = (tick) => {

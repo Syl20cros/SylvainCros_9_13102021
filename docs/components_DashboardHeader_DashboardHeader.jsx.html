@@ -96,6 +96,7 @@ import PropTypes from 'prop-types';
 /**
  * Display custum user message on top of dashboard
  * @component
+ * @param {objet} props: user informations
  * @returns Custom welcome with firstName and a congratulation message
  */
 function DashboardHeader(props) {
@@ -120,9 +121,9 @@ function DashboardHeader(props) {
 
 DashboardHeader.propTypes = {
     /**
-     * name of user
-     */
-    name: PropTypes.string.isRequired
+    * User selected
+    */
+    selectedUser: PropTypes.object.isRequired
 }
 
 export default DashboardHeader;

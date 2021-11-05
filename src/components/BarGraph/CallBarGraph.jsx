@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 /**
  * Perform a user activity request to API and display bar graph with data response
  * @component
+ * @param {objet} props: user informations
  */
 function CallBarGraph(props) {
     const { selectedUser } = props;

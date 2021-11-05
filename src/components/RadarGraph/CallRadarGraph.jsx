@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 /**
  * Perform a user intensity of session request to API and display radar graph with data response
  * @component
+ * @param {objet} props: user informations
  */
 function CallRadarGraph(props) {
   const { selectedUser } = props;

@@ -63,7 +63,7 @@ This project includes four endpoints that you will be able to use:
 
 ## 3. Update documentation
 
-### `npm run docs`
+### `npm run doc`
 
 Use [Jsdoc](https://jsdoc.app/index.html) and [better-docs](https://github.com/SoftwareBrothers/better-docs) to comment the code to keep the documentation up to date.
 

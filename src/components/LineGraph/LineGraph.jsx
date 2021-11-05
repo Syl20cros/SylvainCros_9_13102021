@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 /**
  * Component showing the user's data in line graph
  * @component 
+ * @param {array} data: sessions duration of user on array
+ * @param {string} title: tilte of graph
  * @return {component} 
  */
 function LineGraph({ data, title }) {
@@ -29,7 +31,8 @@ function LineGraph({ data, title }) {
 
   /**
   * Modify the tip bar graph
-  * @param {object}  tooltip  {active , payload} 
+  * @param {array} payload:The source data of the content to be displayed in the tooltip 
+  * @param {boolean} active: If set true, the tooltip is displayed
   * @return html element with new payload value
   */
   const CustomTooltip = ({ active, payload }) => {

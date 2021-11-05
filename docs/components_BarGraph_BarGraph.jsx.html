@@ -97,13 +97,15 @@ import PropTypes from 'prop-types';
 /**
  * Component showing the user's data in bar graph
  * @component 
+ * @param {array} data: user activity
  * @return {component} 
  */
 function BarGraph({ data }) {
 
   /**
   * Modify the tip bar graph
-  * @param {object}  tooltip  {active , payload} 
+  * @param {array} payload:The source data of the content to be displayed in the tooltip 
+  * @param {boolean} active: If set true, the tooltip is displayed
   * @return html element with new payload value
   */
   const CustomTooltip = ({ active, payload }) => {

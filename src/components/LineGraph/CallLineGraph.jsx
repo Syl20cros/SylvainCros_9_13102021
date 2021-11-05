@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 /**
  * Perform a user duration of activity request to API and display line graph with data response
  * @component
+ * @param {objet} props: user informations
  */
 function CallLineGraph(props) {
     const { selectedUser } = props;
