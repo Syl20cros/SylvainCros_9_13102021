@@ -1,9 +1,16 @@
 import './App.css';
+import React from 'react';
+import Header from './components/Header/Header';
+import SideBar from './components/SideBar/SideBar';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 function App() {
   return (
-    <div className="App">SportSee
-    </div>
+    <React.Fragment>
+      <Header />
+      <SideBar />
+      <Dashboard />
+    </React.Fragment>
   );
 }
 

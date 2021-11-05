@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![react](https://img.shields.io/badge/MADE%20WITH-REACT-informational?style=for-the-badge)](https://icons8.com/icon/123603/react-native)
+[![Made by](https://img.shields.io/badge/MADE%20BY-SYLVAIN%20CROS-orange?style=for-the-badge)](https://github.com/Syl20cros)
 
-## Available Scripts
+## SportSee : **The most powerful sport coaching**
 
-In the project directory, you can run:
+SportSee your day-to-day sport progress companion
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 1. Project
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 1.1 Prerequisites
 
-### `yarn test`
+IDE like [Visual Studio Code](https://code.visualstudio.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2.2 Launching project
 
-### `yarn build`
+ - `npm install`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ - `npm start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 2. Backend project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Backend repository](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
 
-### `yarn eject`
+This repo contains all the source code to run the micro API for the sports analytics dashboard.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 2.1 Prerequisites
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [NodeJS (**version 12.18**)](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/)
+- IDE like [Visual Studio Code](https://code.visualstudio.com/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+If you are working with several versions of NodeJS, we recommend you install [nvm](https://github.com/nvm-sh/nvm). This tool will allow you to easily manage your NodeJS versions.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 2.2 Launching the backend project
 
-## Learn More
+- Fork the repository
+- Clone it on your computer.
+- The `yarn` command will allow you to install the dependencies.
+- The `yarn dev` command will allow you to run the micro API.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 2.3. Endpoints
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### 2.3.1 Possible endpoints
 
-### Code Splitting
+This project includes four endpoints that you will be able to use: 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `http://localhost:3000/user/${userId}` - retrieves information from a user. This first endpoint includes the user id, user information (first name, last name and age), the current day's score (todayScore) and key data (calorie, macronutrient, etc.).
+- `http://localhost:3000/user/${userId}/activity` - retrieves a user's activity day by day with kilograms and calories.
+- `http://localhost:3000/user/${userId}/average-sessions` - retrieves the average sessions of a user per day. The week starts on Monday.
+- `http://localhost:3000/user/${userId}/performance` - retrieves a user's performance (energy, endurance, etc.).
 
-### Analyzing the Bundle Size
+**Warning, currently only two users have been mocked. They have userId 12 and 18 respectively.**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### 2.3.2 Examples of queries
 
-### Making a Progressive Web App
+- `http://localhost:3000/user/12/performance` - Retrieves the performance of the user with id 12
+- `http://localhost:3000/user/18` - Retrieves user 18's main information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 3. Update documentation
 
-### Advanced Configuration
+### `npm run doc`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Use [Jsdoc](https://jsdoc.app/index.html) and [better-docs](https://github.com/SoftwareBrothers/better-docs) to comment the code to keep the documentation up to date.
 
-### Deployment
+## 4. Libreries
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Axios](https://www.npmjs.com/package/axios) - Free API resquest library.
+- [Recharts](https://recharts.org/en-US/) - Library for manipulating documents based on data.

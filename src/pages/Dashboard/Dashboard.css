@@ -1,0 +1,60 @@
+.dashboard {
+    position: relative;
+    left: 117px;
+    padding: 2rem 3rem;
+    margin-right: 117px;
+}
+
+.loading {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+}
+
+.error {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    color: red;
+    font-size: 48px;
+}
+
+.contentDashboard {
+    display: flex;
+}
+
+.graphs {
+    display: flex;
+    flex-direction: column;
+}
+
+.smallGraph {
+    width: 835px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.callLineGraph {
+    margin: 0;
+}
+
+.dashboardTag {
+    display: flex;
+    flex-direction: column;
+    height: 615px;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:1300px) {
+    .contentDashboard {
+        flex-direction: column;
+    }
+    .dashboardTag {
+        flex-direction: row;
+        height: 124px;
+        justify-content: space-between;
+        width: 100%;
+    }
+}

@@ -1,0 +1,16 @@
+.DashboardHeader {
+    margin-bottom: 3rem;
+}
+
+.DashboardHeaderhello {
+    font-size: 48px;
+    margin-bottom: 1rem;
+}
+
+.DashboardHeaderhello span {
+    color: red;
+}
+
+.DashboardHeaderMessage {
+    font-size: 18px;
+}

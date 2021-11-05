@@ -1,0 +1,41 @@
+.SideBar {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 792px;
+    position: absolute;
+    width: 117px;
+}
+
+.SideBar a {
+    padding-bottom: 1rem;
+}
+
+.SideBar img {
+    height: 64px;
+}
+
+.SideBar nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.SideBar .copyright {
+    writing-mode: vertical-lr;
+    transform: rotateZ(180deg);
+    color: white;
+    font-size: 12px;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width:1300px) {
+    .SideBar {
+        height: 980px
+    }
+}

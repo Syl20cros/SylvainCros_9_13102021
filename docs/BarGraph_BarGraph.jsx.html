@@ -1,0 +1,203 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> BarGraph/BarGraph.jsx</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Components</h3><ul><li><a href="DashboardHeader.html">DashboardHeader</a></li><li><a href="RadarGraph.html">RadarGraph</a></li><li><a href="TagInfos.html">TagInfos</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>BarGraph/BarGraph.jsx</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from 'react';
+import './BarGraph.css';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import PropTypes from 'prop-types';
+
+
+function BarGraph({data}) {
+  
+  /**
+  * Modify the tip bar chart
+  * @param {object}  tooltip  {active , payload} 
+  * @return html element with new payload value
+  */
+  const CustomTooltip = ({ active, payload }) => {
+    if (active &amp;&amp; payload &amp;&amp; payload.length) {
+      return (
+        &lt;div className="customTooltip">
+          &lt;p className="customTooltipLabel">{`${payload[0].value}kg`}&lt;/p>
+          &lt;p className="customTooltipLabel">{`${payload[1].value}Kcal`}&lt;/p>
+        &lt;/div>
+      )
+    }
+    return null
+  };
+
+  /**
+  * the style and texte of bar chart legend
+  * @param {string} value actual legend text 
+  * @return html element
+  */
+  const CustomLegend = (value) => {
+    const style  = {color : "#74798C", fontSize : "14px"}
+    value = value === "kilogram" ? "Poids (kg)" : "Calories brûlées (Kcal)"
+    return &lt;span style={style}>{value}&lt;/span>   
+  };
+
+  return (
+    &lt;section className="BarGraph">
+      &lt;h3 className="BarGraphTitle">Activité quotidienne&lt;/h3>
+      &lt;ResponsiveContainer width="100%" height="90%">
+        &lt;BarChart
+          width={500}
+          height={300}
+          data={data}
+          margin={{
+              top: 5,
+              right: 30,
+              left: 20,
+              bottom: 5,
+          }}
+        >
+          &lt;CartesianGrid
+            strokeDasharray="3 3"
+            vertical={false}/>
+          &lt;XAxis
+            dataKey={'index'}
+            tickLine={false}/>
+          &lt;YAxis
+              tickLine={false} 
+              tickCount={3}
+              orientation={'right'}
+              axisLine={false}/>
+          &lt;Tooltip content={&lt;CustomTooltip />}/>
+          &lt;Legend 
+              formatter={CustomLegend}
+              align={'right'}
+              verticalAlign={'top'}
+              iconType={'circle'}
+              iconSize={'8'}
+              wrapperStyle={{paddingBottom: '50px'}}
+              />
+          &lt;Bar dataKey="kilogram" fill="#282D30" radius={[5, 5, 0, 0]} barSize={10}/>
+          &lt;Bar dataKey="calories" fill="#E60000" radius={[5, 5, 0, 0]} barSize={10}/>
+        &lt;/BarChart>
+      &lt;/ResponsiveContainer>
+    &lt;/section>
+  );
+}
+
+BarGraph.propTypes = {
+  /**
+   * data is an array
+   */
+  data: PropTypes.array.isRequired
+};
+
+export default BarGraph;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>
